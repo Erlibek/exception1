@@ -13,7 +13,7 @@ public class Test {
     public static User getUserByLoginAndPassword(String login, String password) throws UserNotFoundException {
         User[] users = getUsers();
         for (User user : users) {
-            if (user.getLogin().equals(login) && user.getPass().equals(password)) {
+            if (user.getLogin().equalsIgnoreCase(login) && user.getPass().equalsIgnoreCase(password)) {
                 System.out.println("Пользователь найден");
                 return user;
             }
